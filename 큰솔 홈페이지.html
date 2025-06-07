@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰솔심리상담센터 - 당신의 마음에 귀 기울이는 곳</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- 디자인 수정: 더욱 자연스러운 색상 테마 적용 --- */
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+        .text-brand-dark-green { color: #3A4A45; } /* 더 부드러운 짙은 녹색 */
+        .bg-brand-light-beige { background-color: #F8F6F2; } /* 더 따뜻한 베이지 */
+        .bg-brand-green { background-color: #6A8D73; } /* 자연스러운 세이지 그린 */
+        .text-brand-green { color: #6A8D73; }
+        .border-brand-green { border-color: #6A8D73; }
+        .hover-bg-brand-dark-green:hover { background-color: #3A4A45; }
+        .text-brand-brown { color: #8D6E63; } /* 따뜻한 갈색 추가 */
+        .scroll-smooth { scroll-behavior: smooth; }
+        nav a {
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #6A8D73;
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.07), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-brand-light-beige text-gray-800 scroll-smooth">
+
+    <!-- 헤더 및 네비게이션 -->
+    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <!-- 로고: 로컬 경로로 수정 -->
+            <a href="#" class="flex items-center">
+                <img src="큰솔 로고 long.png" alt="큰솔심리상담센터 로고" class="h-10 md:h-12 mr-2"
+                onerror="this.onerror=null; this.src='https://placehold.co/300x70/ffffff/3A4A45?text=큰솔심리상담센터';">
+            </a>
+
+            <!-- 네비게이션 메뉴 -->
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="font-medium text-gray-600">센터 소개</a>
+                <a href="#programs" class="font-medium text-gray-600">상담 프로그램</a>
+                <a href="#therapists" class="font-medium text-gray-600">상담사 소개</a>
+                <a href="#contact" class="font-medium text-gray-600">예약 및 문의</a>
+                <a href="#contact" class="bg-brand-green text-white px-4 py-2 rounded-full font-bold hover-bg-brand-dark-green">상담 예약</a>
+            </nav>
+            
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        <!-- 모바일 메뉴 -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-gray-600">센터 소개</a>
+            <a href="#programs" class="block py-2 text-gray-600">상담 프로그램</a>
+            <a href="#therapists" class="block py-2 text-gray-600">상담사 소개</a>
+            <a href="#contact" class="block py-2 text-gray-600">예약 및 문의</a>
+            <a href="#contact" class="block mt-2 bg-brand-green text-white px-4 py-2 rounded-full font-bold text-center hover-bg-brand-dark-green">상담 예약</a>
+        </div>
+    </header>
+
+    <!-- 메인 콘텐츠 -->
+    <main>
+        <!-- 히어로 섹션: 소나무 숲 배경 이미지로 변경 -->
+        <section class="relative h-[60vh] md:h-[70vh] flex items-center justify-center text-center text-white bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=2070&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black/50"></div>
+            <div class="relative z-10 p-6">
+                <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-4">당신의 마음에 귀 기울이는 공간</h1>
+                <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">큰솔심리상담센터는 당신의 이야기에 함께하며, 마음의 힘을 키울 수 있도록 돕습니다.</p>
+                <a href="#contact" class="bg-brand-green text-white px-8 py-3 rounded-full font-bold text-lg hover-bg-brand-dark-green transition-colors">지금, 상담 예약하기</a>
+            </div>
+        </section>
+
+        <!-- 센터 소개 (About) -->
+        <section id="about" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12">
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="text-3xl font-bold text-brand-dark-green mb-4">큰솔심리상담센터 이야기</h2>
+                        <p class="text-lg text-gray-700 mb-4 leading-relaxed">
+                            '큰솔'은 단단한 뿌리를 내린 큰 소나무처럼, 어떠한 어려움에도 흔들리지 않는 굳건한 마음을 상징합니다.
+                            저희 센터는 내담자 한 분 한 분이 자신의 내면에 있는 강인한 생명력을 발견하고, 건강한 마음의 뿌리를 내릴 수 있도록 돕는 안전한 동반자가 되겠습니다.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            전문적인 상담가들이 따뜻한 공감과 지지를 바탕으로 당신만의 속도에 맞춰 함께 걷겠습니다.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <!-- 로고: 로컬 경로로 수정 -->
+                        <img src="큰솔 로고.jpg" alt="센터 로고" class="w-64 h-64 rounded-full shadow-lg"
+                        onerror="this.onerror=null; this.src='https://placehold.co/256x256/ffffff/3A4A45?text=큰솔+로고';">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 상담 프로그램 (Programs) -->
+        <section id="programs" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-brand-dark-green">상담 프로그램</h2>
+                    <p class="text-gray-600 mt-2">다양한 필요에 맞춘 전문적인 프로그램을 제공합니다.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- 디자인 수정: 카드 상단에 색상 테두리 추가 -->
+                    <div class="bg-brand-light-beige p-8 rounded-lg text-center card-hover border-t-4 border-brand-green">
+                        <h3 class="text-xl font-bold text-brand-dark-green mb-2">개인 상담</h3>
+                        <p class="text-gray-600">우울, 불안, 스트레스, 대인관계 등 개인적인 어려움에 대한 1:1 심층 상담</p>
+                    </div>
+                    <div class="bg-brand-light-beige p-8 rounded-lg text-center card-hover border-t-4 border-brand-green">
+                        <h3 class="text-xl font-bold text-brand-dark-green mb-2">커플/부부 상담</h3>
+                        <p class="text-gray-600">갈등 해결, 의사소통 개선 등 더 건강하고 만족스러운 관계를 위한 상담</p>
+                    </div>
+                    <div class="bg-brand-light-beige p-8 rounded-lg text-center card-hover border-t-4 border-brand-green">
+                        <h3 class="text-xl font-bold text-brand-dark-green mb-2">청소년 상담</h3>
+                        <p class="text-gray-600">학업 스트레스, 진로 고민, 또래 관계 등 청소년기의 다양한 고민 해결</p>
+                    </div>
+                    <div class="bg-brand-light-beige p-8 rounded-lg text-center card-hover border-t-4 border-brand-green">
+                        <h3 class="text-xl font-bold text-brand-dark-green mb-2">가족 상담</h3>
+                        <p class="text-gray-600">가족 내 갈등과 문제를 해결하고, 서로를 이해하며 함께 성장하는 시간</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 상담사 소개 (Therapists) -->
+        <section id="therapists" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-brand-dark-green">상담사 소개</h2>
+                    <p class="text-gray-600 mt-2">따뜻한 마음과 전문성을 갖춘 상담사들이 함께합니다.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- 디자인 수정: 상담사 사진 배경색 변경, 직책 색상 변경 -->
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <img src="https://placehold.co/150x150/F8F6F2/3A4A45?text=상담사" alt="상담사 사진" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white">
+                        <h3 class="text-xl font-bold text-brand-dark-green">김솔희 센터장</h3>
+                        <p class="text-brand-brown font-medium mb-2">임상심리전문가 / 상담심리사 1급</p>
+                        <p class="text-gray-600 text-sm">"당신의 이야기가 가장 중요한 지도가 됩니다."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <img src="https://placehold.co/150x150/F8F6F2/3A4A45?text=상담사" alt="상담사 사진" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white">
+                        <h3 class="text-xl font-bold text-brand-dark-green">이마음 상담사</h3>
+                        <p class="text-brand-brown font-medium mb-2">청소년상담사 1급</p>
+                        <p class="text-gray-600 text-sm">"마음의 소리에 함께 귀 기울여요."</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-lg p-6 text-center card-hover">
+                        <img src="https://placehold.co/150x150/F8F6F2/3A4A45?text=상담사" alt="상담사 사진" class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-white">
+                        <h3 class="text-xl font-bold text-brand-dark-green">박지혜 상담사</h3>
+                        <p class="text-brand-brown font-medium mb-2">부부/가족상담 전문가</p>
+                        <p class="text-gray-600 text-sm">"함께일 때 더 단단해질 수 있습니다."</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 예약 및 문의 (Contact) -->
+        <section id="contact" class="bg-white py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-brand-dark-green">예약 및 문의</h2>
+                    <p class="text-gray-600 mt-2">상담을 원하시거나 궁금한 점이 있으시면 언제든 문의주세요.</p>
+                </div>
+                <div class="flex flex-col lg:flex-row gap-10">
+                    <!-- 문의 양식 -->
+                    <div class="lg:w-2/3 bg-brand-light-beige p-8 rounded-lg">
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                <input type="text" placeholder="성함" class="w-full p-3 rounded-md border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-green">
+                                <input type="email" placeholder="이메일" class="w-full p-3 rounded-md border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-green">
+                            </div>
+                            <div class="mb-4">
+                                <input type="tel" placeholder="연락처" class="w-full p-3 rounded-md border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-green">
+                            </div>
+                            <div class="mb-4">
+                                <textarea placeholder="문의 내용" rows="6" class="w-full p-3 rounded-md border-gray-300 bg-white focus:outline-none focus:ring-2 focus:ring-brand-green"></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="w-full bg-brand-green text-white px-8 py-3 rounded-full font-bold text-lg hover-bg-brand-dark-green transition-colors">문의 보내기</button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- 연락처 정보 -->
+                    <div class="lg:w-1/3 space-y-6">
+                         <div class="bg-brand-light-beige p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold text-brand-dark-green flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-brand-green" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.518.759a1.037 1.037 0 00-.54 1.06A11.022 11.022 0 009.5 17.5a1.037 1.037 0 001.06-.54l.76-1.518a1 1 0 011.06-.54h4.435a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg>
+                                전화
+                            </h3>
+                            <p class="text-gray-700 pl-7">02-123-4567</p>
+                        </div>
+                        <div class="bg-brand-light-beige p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold text-brand-dark-green flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-brand-green" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg>
+                                주소
+                            </h3>
+                            <p class="text-gray-700 pl-7">서울특별시 마음구 편안로 123, 4층</p>
+                        </div>
+                         <div class="bg-brand-light-beige p-6 rounded-lg">
+                            <h3 class="text-lg font-semibold text-brand-dark-green flex items-center mb-2">
+                               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-brand-green" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" /></svg>
+                                운영시간
+                            </h3>
+                            <p class="text-gray-700 pl-7">평일: 10:00 - 21:00</p>
+                             <p class="text-gray-700 pl-7">주말: 10:00 - 18:00 (예약제)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="bg-brand-dark-green text-white">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <div>
+                    <h3 class="text-lg font-bold">큰솔심리상담센터</h3>
+                    <p class="text-sm text-gray-300 mt-1">
+                        주소: 서울특별시 마음구 편안로 123, 4층 | 대표: 김솔희<br>
+                        사업자등록번호: 123-45-67890 | 전화: 02-123-4567
+                    </p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                     <p class="text-sm text-gray-300">&copy; 2025 Keunsol Counseling Center. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글 스크립트
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // 네비게이션 링크 클릭 시 부드럽게 스크롤
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                // 모바일 메뉴가 열려있으면 닫기
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
